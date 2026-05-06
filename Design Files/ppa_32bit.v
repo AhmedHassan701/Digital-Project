@@ -21,13 +21,9 @@ module ppa_32bit (
     endgenerate
 
     // ------------------------------------------------
-    // Stage 2 — Kogge-Stone prefix tree
-    // 5 levels, each level doubles the stride
-    //
-    // Cin is seeded into bit 0 of Level 1:
-    //   G1[0] = G0[0] | (P0[0] & Cin)
-    //   P1[0] = P0[0]
-    // This way G5[j] = carry OUT of bit j given Cin
+    // Stage 2 — Kogge-Stone prefix tree (Cin-independent)
+    // G5[j] = carry generated from bits 0..j assuming Cin=0
+    // P5[j] = 1 if carry propagates through all bits 0..j
     // ------------------------------------------------
     wire [31:0] G1, P1;
     wire [31:0] G2, P2;
@@ -37,12 +33,10 @@ module ppa_32bit (
 
     // ------------------------------------------------
     // Level 1 — stride = 1
-    // bit 0: seed Cin here
+    // bit 0: no Cin seeding — prefix tree is Cin-independent
     // bits 1-31: dot operator with bit j-1
     // ------------------------------------------------
-
-    // Cin seeded into bit 0
-    assign G1[0] = G0[0] | (P0[0] & Cin);
+    assign G1[0] = G0[0];
     assign P1[0] = P0[0];
 
     genvar j;
@@ -165,21 +159,15 @@ module ppa_32bit (
         end
     endgenerate
 
-    // ------------------------------------------------
-    // Stage 3 — Post-processing
-    //
-    // Sum[0]  = P0[0] ^ Cin          carry into bit 0 is Cin
-    // Sum[j]  = P0[j] ^ G5[j-1]     carry into bit j = G5[j-1] (includes Cin)
-    // Sum[32] = G5[31]               Cin already baked in via Level-1 seed
-    // ------------------------------------------------
+
     assign Sum[0] = P0[0] ^ Cin;
 
     generate
         for (j = 1; j < 32; j = j + 1) begin : post
-            assign Sum[j] = P0[j] ^ G5[j-1];
+            assign Sum[j] = P0[j] ^ (G5[j-1] | (P5[j-1] & Cin));
         end
     endgenerate
 
-    assign Sum[32] = G5[31];
+    assign Sum[32] = G5[31] | (P5[31] & Cin);
 
 endmodule
