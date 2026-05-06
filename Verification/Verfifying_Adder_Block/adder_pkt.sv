@@ -18,9 +18,6 @@ class adder_pkt;
     //B inside {['d1:'d10]};
   }
 
-  constraint Cin_C {
-    Cin == 1'b0;
-  }
 
   // Cover Group
   covergroup cg;

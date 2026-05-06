@@ -170,7 +170,7 @@ module ppa_32bit (
     //
     // Sum[0]  = P0[0] ^ Cin          carry into bit 0 is Cin
     // Sum[j]  = P0[j] ^ G5[j-1]     carry into bit j = G5[j-1] (includes Cin)
-    // Sum[32] = G5[31] | (P5[31] & Cin)   carry out of MSB
+    // Sum[32] = G5[31]               Cin already baked in via Level-1 seed
     // ------------------------------------------------
     assign Sum[0] = P0[0] ^ Cin;
 
@@ -180,6 +180,6 @@ module ppa_32bit (
         end
     endgenerate
 
-    assign Sum[32] = G5[31] | (P5[31] & Cin);
+    assign Sum[32] = G5[31];
 
 endmodule
