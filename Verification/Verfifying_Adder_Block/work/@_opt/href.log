@@ -1,0 +1,6 @@
+BEGIN 3:adder_if:fast__1:work
+    Cin :  1:adder_top:fast:work 1:adder_tb:fast:work
+    B :  1:adder_top:fast:work 1:adder_tb:fast:work
+    A :  1:adder_top:fast:work 1:adder_tb:fast:work
+    Sum :  1:adder_top:fast:work 1:adder_tb:fast:work
+END 
