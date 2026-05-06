@@ -10,7 +10,7 @@ module adder_tb (adder_if.TB adderif);
   localparam DELAY      = 1;
 
   // Constant
-  const int num_rands = 100;
+  const int num_rands = 1000;
 
   // Queues
   logic [DATA_WIDTH:0]expected_output_queue[$];
