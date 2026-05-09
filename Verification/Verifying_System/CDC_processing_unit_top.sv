@@ -2,17 +2,26 @@ module CDC_processing_unit_top #(
     parameter DATA_WIDTH = 32,
     parameter DATA_DEPTH = 16,
     parameter ADDR_WIDTH = 4
-)(
-    input   wire                  W_CLK,
-    input   wire                  W_Enable,
-    input   wire                  R_CLK,
-    input   wire                  rst_n,
-    input   wire [DATA_WIDTH-1:0] WR_DATA,
-    input                         Cin,
-    output  wire                  FULL,
-    output  wire [32:0] Sum    
-    
-);
+)(system_if.DUT systemif);
+
+logic W_Enable;
+logic rst_n;
+logic [DATA_WIDTH - 1:0]WR_DATA;
+logic Cin;
+logic W_CLK;
+logic R_CLK;
+logic FULL;
+logic [DATA_WIDTH:0]Sum;
+
+assign W_Enable       = systemif.W_Enable;
+assign rst_n          = systemif.rst_n;
+assign WR_DATA        = systemif.WR_DATA;
+assign Cin            = systemif.Cin;
+assign W_CLK          = systemif.W_CLK;
+assign R_CLK          = systemif.R_CLK;
+
+assign systemif.FULL  = FULL;
+assign systemif.Sum   = Sum;
 
 wire  EMPTY; 
 wire [DATA_WIDTH-1:0] RD_DATA;
