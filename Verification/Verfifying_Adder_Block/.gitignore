@@ -1,6 +1,7 @@
+work/
 Adder_Verification.mpf
 Adder_Verification.cr.mti
-cov_adder.txt
+adder_coverage.txt
 cov.ucdb
 run.do
 vsim.wlf

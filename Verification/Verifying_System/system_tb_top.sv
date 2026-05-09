@@ -61,7 +61,8 @@ module system_tb_top ();
   system_tb tb (
     systemif.TB,
     dut.fsm_u.current_state,
-    dut.fsm_u.next_state
+    dut.fsm_u.next_state,
+    dut.EMPTY
   );
 
 endmodule
