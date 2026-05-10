@@ -1,0 +1,1039 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /fifo_tb_top/fifoif
+=== Design Unit: work.fifo_if
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        142       142         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/fifoif --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+
+Total Node Count     =         71 
+Toggled Node Count   =         71 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (142 of 142 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut/FIFO
+=== Design Unit: work.FIFO_MEM_CNTRL
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/dut/FIFO
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_MEM_CNTRL.v
+------------------------------------IF Branch------------------------------------
+    25                                        23     Count coming in to IF
+    25              1                          2     
+    30              1                         16     
+                                               5     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      2         2         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /fifo_tb_top/dut/FIFO --
+
+  File FIFO_MEM_CNTRL.v
+----------------Focused Expression View-----------------
+Line       20 Item    1  (W_Enable & ~W_Full)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/dut/FIFO --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_MEM_CNTRL.v
+    20              1                         11     
+    23              1                         23     
+    26              1                          2     
+    26              2                         32     
+    28              1                         32     
+    32              1                         16     
+    37              1                         33     
+    39              1                         33     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        218       154        64    70.64%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut/FIFO --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                           i[0-31]           0           0        0.00 
+
+Total Node Count     =        109 
+Toggled Node Count   =         77 
+Untoggled Node Count =         32 
+
+Toggle Coverage      =      70.64% (154 of 218 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut/Write_Control
+=== Design Unit: work.FIFO_WR
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         7         7         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/dut/Write_Control
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_WR.v
+------------------------------------IF Branch------------------------------------
+    28                                        25     Count coming in to IF
+    28              1                          2     
+    32              1                         16     
+                                               7     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                        16     Count coming in to IF
+    33              1                          1     
+    35              1                         15     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    41                                        23     Count coming in to IF
+    41              1                          2     
+    42              1                         21     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       3         3         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fifo_tb_top/dut/Write_Control --
+
+  File FIFO_WR.v
+----------------Focused Condition View-------------------
+Line       32 Item    1  (W_Enable && ~FULL)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       33 Item    1  (WR_addr == {4{{1}}})
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /fifo_tb_top/dut/Write_Control --
+
+  File FIFO_WR.v
+----------------Focused Expression View-----------------
+Line       22 Item    1  (WR_ptr_comb == {~Wq2_Rptr[4],~Wq2_Rptr[3],Wq2_Rptr[2:0]})
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/dut/Write_Control --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_WR.v
+    17              1                         17     
+    18              1                         17     
+    22              1                         26     
+    27              1                         25     
+    29              1                          2     
+    30              1                          2     
+    34              1                          1     
+    36              1                         15     
+    40              1                         23     
+    41              1                          2     
+    42              1                         21     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         48        41         7    85.41%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut/Write_Control --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                              Flag           0           1       50.00 
+                                       WR_ptr[3-4]           0           1       50.00 
+                                  WR_ptr_comb[3-4]           0           1       50.00 
+                                     Wq2_Rptr[3-4]           0           1       50.00 
+
+Total Node Count     =         24 
+Toggled Node Count   =         17 
+Untoggled Node Count =          7 
+
+Toggle Coverage      =      85.41% (41 of 48 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut/Read_Control
+=== Design Unit: work.FIFO_RD
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         7         7         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/dut/Read_Control
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_RD.v
+------------------------------------IF Branch------------------------------------
+    26                                        37     Count coming in to IF
+    26              1                          2     
+    30              1                         16     
+                                              19     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                        16     Count coming in to IF
+    31              1                          1     
+    33              1                         15     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    39                                        36     Count coming in to IF
+    39              1                          2     
+    40              1                         34     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       3         2         1    66.66%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fifo_tb_top/dut/Read_Control --
+
+  File FIFO_RD.v
+----------------Focused Condition View-------------------
+Line       30 Item    1  (R_Enable && ~EMPTY)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+    R_Enable         Y
+       EMPTY         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  R_Enable_0            -                             
+  Row   2:          1  R_Enable_1            ~EMPTY                        
+  Row   3:          1  EMPTY_0               R_Enable                      
+  Row   4:    ***0***  EMPTY_1               R_Enable                      
+
+----------------Focused Condition View-------------------
+Line       31 Item    1  (RD_addr == {4{{1}}})
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /fifo_tb_top/dut/Read_Control --
+
+  File FIFO_RD.v
+----------------Focused Expression View-----------------
+Line       17 Item    1  (RD_ptr_comb == Rq2_Wptr)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/dut/Read_Control --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO_RD.v
+    17              1                         35     
+    20              1                         17     
+    21              1                         17     
+    25              1                         37     
+    27              1                          2     
+    28              1                          2     
+    32              1                          1     
+    34              1                         15     
+    38              1                         36     
+    39              1                          2     
+    40              1                         34     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         48        41         7    85.41%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut/Read_Control --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                              Flag           0           1       50.00 
+                                       RD_ptr[3-4]           0           1       50.00 
+                                  RD_ptr_comb[3-4]           0           1       50.00 
+                                     Rq2_Wptr[3-4]           0           1       50.00 
+
+Total Node Count     =         24 
+Toggled Node Count   =         17 
+Untoggled Node Count =          7 
+
+Toggle Coverage      =      85.41% (41 of 48 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut/sync_W2R
+=== Design Unit: work.DF_SYNC
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/dut/sync_W2R
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File DF_SYNC.v
+------------------------------------IF Branch------------------------------------
+    16                                        52     Count coming in to IF
+    16              1                          2     
+    23              1                         50     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/dut/sync_W2R --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File DF_SYNC.v
+    14              1                         52     
+    18              1                          2     
+    18              2                         10     
+    20              1                         10     
+    25              1                         50     
+    25              2                        250     
+    27              1                        250     
+    32              1                         33     
+    34              1                         33     
+    34              2                        165     
+    36              1                        165     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         88        20        68    22.72%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut/sync_W2R --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                   ASYNC_DATA[3-4]           0           1       50.00 
+                                    SYNC_DATA[3-4]           0           1       50.00 
+                                           i[0-31]           0           0        0.00 
+
+Total Node Count     =         44 
+Toggled Node Count   =          8 
+Untoggled Node Count =         36 
+
+Toggle Coverage      =      22.72% (20 of 88 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut/sync_R2W
+=== Design Unit: work.DF_SYNC
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/dut/sync_R2W
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File DF_SYNC.v
+------------------------------------IF Branch------------------------------------
+    16                                        13     Count coming in to IF
+    16              1                          2     
+    23              1                         11     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/dut/sync_R2W --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File DF_SYNC.v
+    14              1                         13     
+    18              1                          2     
+    18              2                         10     
+    20              1                         10     
+    25              1                         11     
+    25              2                         55     
+    27              1                         55     
+    32              1                          9     
+    34              1                          9     
+    34              2                         45     
+    36              1                         45     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         88        20        68    22.72%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut/sync_R2W --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                   ASYNC_DATA[3-4]           0           1       50.00 
+                                    SYNC_DATA[3-4]           0           1       50.00 
+                                           i[0-31]           0           0        0.00 
+
+Total Node Count     =         44 
+Toggled Node Count   =          8 
+Untoggled Node Count =         36 
+
+Toggle Coverage      =      22.72% (20 of 88 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/dut
+=== Design Unit: work.ASYNC_FIFO
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        198       190         8    95.95%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/dut --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                       RD_ptr[3-4]           0           1       50.00 
+                                     Rq2_Wptr[3-4]           0           1       50.00 
+                                       WR_ptr[3-4]           0           1       50.00 
+                                     Wq2_Rptr[3-4]           0           1       50.00 
+
+Total Node Count     =         99 
+Toggled Node Count   =         91 
+Untoggled Node Count =          8 
+
+Toggle Coverage      =      95.95% (190 of 198 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top/tb
+=== Design Unit: work.fifo_tb
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       2         2         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fifo_tb_top/tb/generateStimulus/immed__89
+                     fifo_tb.sv(89)                     0          1
+/fifo_tb_top/tb/fill_loop/#ublk#217929410#249/immed__250
+                     fifo_tb.sv(250)                    0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        12         7         5    58.33%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fifo_tb_top/tb
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_tb.sv
+------------------------------------IF Branch------------------------------------
+    110                                       12     Count coming in to IF
+    110             1                         12     
+    113             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    138                                        9     Count coming in to IF
+    138             1                          8     
+                                               1     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    159                                       16     Count coming in to IF
+    159             1                         16     
+    166             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    182                                        1     Count coming in to IF
+    182             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    191                                       16     Count coming in to IF
+    191             1                         16     
+    195             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    256                                        8     Count coming in to IF
+    256             1                          8     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       5         1         4    20.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fifo_tb_top/tb --
+
+  File fifo_tb.sv
+----------------Focused Condition View-------------------
+Line       110 Item    1  (actual === expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (actual === expected)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:    ***0***  (actual === expected)_0  -                             
+  Row   2:          1  (actual === expected)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       182 Item    1  (size(expected_queue) != size(actual_queue))
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                    Input Term   Covered  Reason for no coverage   Hint
+                                   -----------  --------  -----------------------  --------------
+  (size(expected_queue) != size(actual_queue))         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                      Non-masking condition(s)      
+ ---------  ---------  --------------------                            -------------------------     
+  Row   1:          1  (size(expected_queue) != size(actual_queue))_0  -                             
+  Row   2:    ***0***  (size(expected_queue) != size(actual_queue))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       186 Item    1  ((size(expected_queue) > 0) && (size(actual_queue) > 0))
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+  (size(expected_queue) > 0)         Y
+    (size(actual_queue) > 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:          1  (size(expected_queue) > 0)_0  -                             
+  Row   2:          1  (size(expected_queue) > 0)_1  (size(actual_queue) > 0)      
+  Row   3:    ***0***  (size(actual_queue) > 0)_0    (size(expected_queue) > 0)    
+  Row   4:          1  (size(actual_queue) > 0)_1    (size(expected_queue) > 0)    
+
+----------------Focused Condition View-------------------
+Line       191 Item    1  (act_val === exp_val)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (act_val === exp_val)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:    ***0***  (act_val === exp_val)_0  -                             
+  Row   2:          1  (act_val === exp_val)_1  -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      2         1         1    50.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /fifo_tb_top/tb --
+
+  File fifo_tb.sv
+----------------Focused Expression View-----------------
+Line       133 Item    1  (pkt.W_Enable && ~fifoif.FULL)
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  pkt.W_Enable         Y
+   fifoif.FULL         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  pkt.W_Enable_0        -                             
+  Row   2:          1  pkt.W_Enable_1        ~fifoif.FULL                  
+  Row   3:          1  fifoif.FULL_0         pkt.W_Enable                  
+  Row   4:    ***0***  fifoif.FULL_1         pkt.W_Enable                  
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     104        98         6    94.23%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top/tb --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_tb.sv
+    63              1                          1     
+    64              1                          1     
+    65              1                          1     
+    66              1                          2     
+    66              2                          2     
+    67              1                          1     
+    68              1                          1     
+    75              1                          1     
+    76              1                          1     
+    77              1                          1     
+    78              1                          1     
+    79              1                          1     
+    80              1                          1     
+    81              1                          1     
+    82              1                          1     
+    90              1                          9     
+    97              1                         16     
+    111             1                         12     
+    112             1                         12     
+    114             1                    ***0***     
+    116             1                    ***0***     
+    127             1                          8     
+    128             1                          9     
+    130             1                          9     
+    131             1                          9     
+    133             1                          9     
+    135             1                          9     
+    136             1                          9     
+    139             1                          8     
+    140             1                          8     
+    141             1                          8     
+    144             1                          1     
+    155             1                         16     
+    156             1                         16     
+    157             1                         16     
+    160             1                         16     
+    161             1                         16     
+    162             1                         16     
+    163             1                         16     
+    164             1                         16     
+    165             1                         16     
+    167             1                    ***0***     
+    180             1                          1     
+    183             1                    ***0***     
+    186             1                         17     
+    187             1                         16     
+    188             1                         16     
+    189             1                         16     
+    192             1                         16     
+    194             1                         16     
+    196             1                    ***0***     
+    198             1                    ***0***     
+    202             1                          1     
+    203             1                          1     
+    204             1                          1     
+    205             1                          1     
+    206             1                          1     
+    207             1                          1     
+    208             1                          1     
+    209             1                          1     
+    210             1                          1     
+    211             1                          1     
+    212             1                          1     
+    226             1                          1     
+    227             1                          1     
+    232             1                          1     
+    233             1                          1     
+    233             2                          8     
+    234             1                          8     
+    236             1                          8     
+    239             1                          5     
+    239             2                          5     
+    246             1                          1     
+    249             1                          9     
+    251             1                          8     
+    252             1                          8     
+    253             1                          8     
+    254             1                          8     
+    255             1                          8     
+    257             1                          8     
+    259             1                          1     
+    263             1                          1     
+    268             1                          1     
+    269             1                          1     
+    270             1                          1     
+    271             1                          1     
+    272             1                          1     
+    273             1                          1     
+    276             1                          1     
+    278             1                          1     
+    281             1                          1     
+    294             1                          1     
+    297             1                         20     
+    297             2                         20     
+    300             1                          1     
+    305             1                          1     
+    306             1                          1     
+    306             2                         16     
+    307             1                         16     
+    312             1                         20     
+    312             2                         20     
+    315             1                          1     
+    317             1                          1     
+    318             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        260        11       249     4.23%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top/tb --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                               flag_failures[0-31]           0           0        0.00 
+                                    flag_passes[3]           0           1       50.00 
+                                 flag_passes[4-31]           0           0        0.00 
+                                num_failures[0-31]           0           0        0.00 
+                                  num_passes[0-31]           0           0        0.00 
+
+Total Node Count     =        130 
+Toggled Node Count   =          5 
+Untoggled Node Count =        125 
+
+Toggle Coverage      =       4.23% (11 of 260 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_top
+=== Design Unit: work.fifo_tb_top
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_tb_top.sv
+    32              1                          1     
+    33              1                          1     
+    33              2                         82     
+    33              3                         81     
+    37              1                          1     
+    38              1                          1     
+    38              2                        410     
+    38              3                        409     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          4         4         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /fifo_tb_top --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+
+Total Node Count     =          2 
+Toggled Node Count   =          2 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (4 of 4 bins)
+
+=================================================================================
+=== Instance: /fifo_tb_sv_unit
+=== Design Unit: work.fifo_tb_sv_unit
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    67.41%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins         31        17        14    54.83%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fifo_tb_sv_unit/fifo_pkt/cg                     67.41%        100          -    Uncovered            
+    covered/total bins:                                    17         31          -                      
+    missing/total bins:                                    14         31          -                      
+    % Hit:                                             54.83%        100          -                      
+    Coverpoint cp_WR_DATA                              57.14%        100          -    Uncovered            
+        covered/total bins:                                 4          7          -                      
+        missing/total bins:                                 3          7          -                      
+        % Hit:                                         57.14%        100          -                      
+    Coverpoint cp_W_Enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_R_Enable                             75.00%        100          -    Uncovered            
+        covered/total bins:                                 3          4          -                      
+        missing/total bins:                                 1          4          -                      
+        % Hit:                                         75.00%        100          -                      
+    Cross cx_W_R_Enable                                37.50%        100          -    Uncovered            
+        covered/total bins:                                 6         16          -                      
+        missing/total bins:                                10         16          -                      
+        % Hit:                                         37.50%        100          -                      
+ Covergroup instance \/fifo_tb_sv_unit::fifo_pkt::cg  
+                                                       67.41%        100          -    Uncovered            
+    covered/total bins:                                    17         31          -                      
+    missing/total bins:                                    14         31          -                      
+    % Hit:                                             54.83%        100          -                      
+    Coverpoint cp_WR_DATA                              57.14%        100          -    Uncovered            
+        covered/total bins:                                 4          7          -                      
+        missing/total bins:                                 3          7          -                      
+        % Hit:                                         57.14%        100          -                      
+        bin WR_DATA_ZERO                                    0          1          -    ZERO                 
+        bin WR_DATA_ONES                                    2          1          -    Covered              
+        bin WR_DATA_LOW                                     2          1          -    Covered              
+        bin WR_DATA_MED                                     2          1          -    Covered              
+        bin WR_DATA_HIGH                                    3          1          -    Covered              
+        bin WR_DATA_ZERO_T_HIGH                             0          1          -    ZERO                 
+        bin WR_DATA_HIGH_T_ZERO                             0          1          -    ZERO                 
+    Coverpoint cp_W_Enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin W_Enable_ZERO                                   1          1          -    Covered              
+        bin W_Enable_ONE                                    8          1          -    Covered              
+        bin W_Enable_ZERO_T_ONE                             1          1          -    Covered              
+        bin W_Enable_ONE_T_ZERO                             1          1          -    Covered              
+    Coverpoint cp_R_Enable                             75.00%        100          -    Uncovered            
+        covered/total bins:                                 3          4          -                      
+        missing/total bins:                                 1          4          -                      
+        % Hit:                                         75.00%        100          -                      
+        bin R_Enable_ZERO                                   1          1          -    Covered              
+        bin R_Enable_ONE                                    8          1          -    Covered              
+        bin R_Enable_ZERO_T_ONE                             0          1          -    ZERO                 
+        bin R_Enable_ONE_T_ZERO                             1          1          -    Covered              
+    Cross cx_W_R_Enable                                37.50%        100          -    Uncovered            
+        covered/total bins:                                 6         16          -                      
+        missing/total bins:                                10         16          -                      
+        % Hit:                                         37.50%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <W_Enable_ONE,R_Enable_ONE_T_ZERO>          1          1          -    Covered              
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ONE>          1          1          -    Covered              
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ONE>          1          1          -    Covered              
+            bin <W_Enable_ONE,R_Enable_ONE>                 7          1          -    Covered              
+            bin <W_Enable_ZERO,R_Enable_ONE>                1          1          -    Covered              
+            bin <W_Enable_ONE,R_Enable_ZERO>                1          1          -    Covered              
+            bin <*,R_Enable_ZERO_T_ONE>                     0          1          4    ZERO                 
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO,R_Enable_ZERO>               0          1          1    ZERO                 
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_sv_unit --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_pkt.sv
+    62              1                          1     
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fifo_tb_sv_unit/fifo_pkt/cg                     67.41%        100          -    Uncovered            
+    covered/total bins:                                    17         31          -                      
+    missing/total bins:                                    14         31          -                      
+    % Hit:                                             54.83%        100          -                      
+    Coverpoint cp_WR_DATA                              57.14%        100          -    Uncovered            
+        covered/total bins:                                 4          7          -                      
+        missing/total bins:                                 3          7          -                      
+        % Hit:                                         57.14%        100          -                      
+    Coverpoint cp_W_Enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_R_Enable                             75.00%        100          -    Uncovered            
+        covered/total bins:                                 3          4          -                      
+        missing/total bins:                                 1          4          -                      
+        % Hit:                                         75.00%        100          -                      
+    Cross cx_W_R_Enable                                37.50%        100          -    Uncovered            
+        covered/total bins:                                 6         16          -                      
+        missing/total bins:                                10         16          -                      
+        % Hit:                                         37.50%        100          -                      
+ Covergroup instance \/fifo_tb_sv_unit::fifo_pkt::cg  
+                                                       67.41%        100          -    Uncovered            
+    covered/total bins:                                    17         31          -                      
+    missing/total bins:                                    14         31          -                      
+    % Hit:                                             54.83%        100          -                      
+    Coverpoint cp_WR_DATA                              57.14%        100          -    Uncovered            
+        covered/total bins:                                 4          7          -                      
+        missing/total bins:                                 3          7          -                      
+        % Hit:                                         57.14%        100          -                      
+        bin WR_DATA_ZERO                                    0          1          -    ZERO                 
+        bin WR_DATA_ONES                                    2          1          -    Covered              
+        bin WR_DATA_LOW                                     2          1          -    Covered              
+        bin WR_DATA_MED                                     2          1          -    Covered              
+        bin WR_DATA_HIGH                                    3          1          -    Covered              
+        bin WR_DATA_ZERO_T_HIGH                             0          1          -    ZERO                 
+        bin WR_DATA_HIGH_T_ZERO                             0          1          -    ZERO                 
+    Coverpoint cp_W_Enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin W_Enable_ZERO                                   1          1          -    Covered              
+        bin W_Enable_ONE                                    8          1          -    Covered              
+        bin W_Enable_ZERO_T_ONE                             1          1          -    Covered              
+        bin W_Enable_ONE_T_ZERO                             1          1          -    Covered              
+    Coverpoint cp_R_Enable                             75.00%        100          -    Uncovered            
+        covered/total bins:                                 3          4          -                      
+        missing/total bins:                                 1          4          -                      
+        % Hit:                                         75.00%        100          -                      
+        bin R_Enable_ZERO                                   1          1          -    Covered              
+        bin R_Enable_ONE                                    8          1          -    Covered              
+        bin R_Enable_ZERO_T_ONE                             0          1          -    ZERO                 
+        bin R_Enable_ONE_T_ZERO                             1          1          -    Covered              
+    Cross cx_W_R_Enable                                37.50%        100          -    Uncovered            
+        covered/total bins:                                 6         16          -                      
+        missing/total bins:                                10         16          -                      
+        % Hit:                                         37.50%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <W_Enable_ONE,R_Enable_ONE_T_ZERO>          1          1          -    Covered              
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ONE>          1          1          -    Covered              
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ONE>          1          1          -    Covered              
+            bin <W_Enable_ONE,R_Enable_ONE>                 7          1          -    Covered              
+            bin <W_Enable_ZERO,R_Enable_ONE>                1          1          -    Covered              
+            bin <W_Enable_ONE,R_Enable_ZERO>                1          1          -    Covered              
+            bin <*,R_Enable_ZERO_T_ONE>                     0          1          4    ZERO                 
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO,R_Enable_ONE_T_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ONE_T_ZERO,R_Enable_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO_T_ONE,R_Enable_ZERO> 
+                                                            0          1          1    ZERO                 
+            bin <W_Enable_ZERO,R_Enable_ZERO>               0          1          1    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 67.41%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fifo_tb_top/tb/generateStimulus/immed__89
+                     fifo_tb.sv(89)                     0          1
+/fifo_tb_top/tb/fill_loop/#ublk#217929410#249/immed__250
+                     fifo_tb.sv(250)                    0          1
+
+Total Coverage By Instance (filtered view): 76.73%
+
