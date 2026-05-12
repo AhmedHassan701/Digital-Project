@@ -275,5 +275,6 @@ module fifo_tb (
     outputSummary();
     $stop;
   end
+  
 
 endmodule

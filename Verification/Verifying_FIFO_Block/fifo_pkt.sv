@@ -47,7 +47,6 @@ class fifo_pkt;
       bins R_Enable_ONE_T_ZERO = (1'b1 => 1'b0);
     }
 
-
   endgroup
 
   // Constructor
