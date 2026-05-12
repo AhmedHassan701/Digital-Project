@@ -54,10 +54,5 @@ adder_top adder_top_u(
     .Cin(Cin),
     .Sum(Sum)    
 );
-
-
-
-
-
-    
+ 
 endmodule

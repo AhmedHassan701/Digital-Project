@@ -3,7 +3,7 @@ module fsm(
     input         i_empty,
     input         clk,
     input         rst_n,
-    output reg    o_read_enable,        // combinational -- driven by always @(*)
+    output reg    o_read_enable,        
     output reg [31:0] A_operand,
     output reg [31:0] B_operand
 );
@@ -25,8 +25,6 @@ end
 
 // -----------------------------------------------
 // Block 2: output logic (sequential)
-// Latches operands based on next_state to
-// compensate for the 1-cycle FIFO read latency
 // -----------------------------------------------
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
@@ -36,12 +34,12 @@ always @(posedge clk or negedge rst_n) begin
     end else begin
         case (current_state)           
             READ_A: begin
-                A_operand_reg <= i_operands;   // capture A one cycle after read
+                A_operand_reg <= i_operands;   
             end
             READ_B: begin
                 if (!i_empty) begin
-                    A_operand <= A_operand_reg;  // output A from previous cycle
-                    B_operand <= i_operands;    // output B from current cycle
+                    A_operand <= A_operand_reg;  
+                    B_operand <= i_operands;    
                 end
             end
             default: ;

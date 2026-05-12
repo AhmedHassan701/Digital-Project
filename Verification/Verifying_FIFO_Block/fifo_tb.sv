@@ -1,22 +1,6 @@
 `timescale 1ns/1ps
 `include "fifo_pkt.sv"
 
-// ============================================================
-//  fifo_tb
-//
-//  Verification environment for the Asynchronous FIFO.
-//
-//  Write domain : 20  MHz (W_CLK)
-//  Read  domain : 100 MHz (R_CLK)
-//
-//  Flow:
-//    Write thread : drives WR_DATA into the FIFO, pushes
-//                   written data into expected_queue, checks
-//                   FULL flag, then triggers write_done.
-//    Read  thread : waits for write_done + CDC settling, drains
-//                   FIFO into actual_queue, checks EMPTY flag,
-//                   then compares both queues via outputSummary.
-// ============================================================
 module fifo_tb (
   fifo_if.TB        fifoif,
   input logic       FULL_mon,
@@ -99,8 +83,6 @@ module fifo_tb (
 
   // ==========================================================
   //  TASK : checkFlag
-  //    Generic flag checker — used for both FULL and EMPTY.
-  //    Prints PASSED / FAILED and updates flag counters.
   // ==========================================================
   task automatic checkFlag(
     input string flag_name,
@@ -119,8 +101,6 @@ module fifo_tb (
 
   // ==========================================================
   //  TASK : driveWrite
-  //    Snapshots FULL before the rising edge — same view as DUT.
-  //    Commits to goldenModel only when the write truly lands.
   // ==========================================================
   task automatic driveWrite();
     logic will_write;
@@ -147,9 +127,6 @@ module fifo_tb (
 
   // ==========================================================
   //  TASK : collectOutput
-  //    RD_DATA is combinatorial on RD_addr.
-  //    Capture RD_DATA first (already valid), then pulse
-  //    R_Enable to advance the read pointer.
   // ==========================================================
   task automatic collectOutput();
     forever begin
@@ -212,16 +189,7 @@ module fifo_tb (
     $display("====================================================");
   endtask
 
-  // ==========================================================
-  //  WRITE THREAD
-  //
-  //  Phase 1 : NUM_TRANSACTIONS random writes
-  //              → FULL must stay 0 (FIFO not yet full)
-  //  Phase 2 : fill FIFO until FULL asserts
-  //              → after last write FULL must be 1
-  //  Phase 3 : attempt write while FULL
-  //              → FULL must stay 1, no new data pushed
-  // ==========================================================
+
   initial begin
     pkt = new();
     init();
@@ -281,15 +249,6 @@ module fifo_tb (
     -> write_done;
   end
 
-  // ==========================================================
-  //  READ THREAD
-  //
-  //  Waits for write_done + CDC settling, then drains FIFO.
-  //
-  //  Flag checks:
-  //    - EMPTY must be 0 before first read (FIFO is full)
-  //    - EMPTY must be 1 after last read   (FIFO drained)
-  // ==========================================================
   initial begin
     @(write_done);
 
@@ -308,7 +267,6 @@ module fifo_tb (
     end
 
     // Allow RD_ptr CDC to propagate back to write domain
-    // and EMPTY to assert (2 R_CLK synchroniser stages)
     repeat(20) @(posedge fifoif.R_CLK);
 
     // EMPTY must be 1 — all entries have been read

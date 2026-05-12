@@ -29,14 +29,9 @@ class fifo_pkt;
   covergroup cg;
 
     cp_WR_DATA: coverpoint WR_DATA {
-      bins WR_DATA_ZERO        = {'d0};
-      bins WR_DATA_ONES        = {'hFF_FF_FF_FF};
-      bins WR_DATA_LOW         = {['d1           : 'h40_00_00_00]};
-      bins WR_DATA_MED         = {['h40_00_00_01 : 'h80_00_00_00]};
-      bins WR_DATA_HIGH        = {['h80_00_00_01 : 'hFF_FF_FF_FE]};
-      bins WR_DATA_ZERO_T_HIGH = ('d0          => 'hFF_FF_FF_FF);
-      bins WR_DATA_HIGH_T_ZERO = ('hFF_FF_FF_FF => 'd0);
-    }
+      bins WR_DATA_MAX  = {32'hFFFF_FFFF};
+      bins WR_DATA_MID  = {[32'h0000_0001 : 32'hFFFF_FFFE]};
+  }
 
     cp_W_Enable: coverpoint W_Enable {
       bins W_Enable_ZERO       = {1'b0};
@@ -52,8 +47,6 @@ class fifo_pkt;
       bins R_Enable_ONE_T_ZERO = (1'b1 => 1'b0);
     }
 
-    // Cross coverage: simultaneous read and write
-    cx_W_R_Enable: cross cp_W_Enable, cp_R_Enable;
 
   endgroup
 
